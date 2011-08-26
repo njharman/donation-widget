@@ -1,0 +1,54 @@
+Donation Widget Generator
+
+There are three steps to make the Donation Widget Generator avialable on 
+your website.
+
+1. If you don't already have a Paypal account you must create one at this
+time.  You may learn more about Paypal donations and create an account at the
+the following url.
+  https://www.paypal.com/cgi-bin/webscr?cmd=p/xcl/rec/donate-intro-outside
+
+
+2. Edit the configuration variables.  You may use any text editor to edit the
+Donation Widget Generator script.  The configuration variables are all together 
+at the begining of the script.
+
+The only varible you must change is paypal_id, you must enter your Paypal id 
+  var paypal_id    = 'payment@example.com'
+
+The item that donator is 'buying'
+  var text         = 'Thanks for your Donation' 
+Whether donator can submit a note with their donation (true / false)
+  var allow_note   = true 
+
+The following four variables are defaults that users may modify using the
+Donation Widget Generator.
+
+The dollar amount of the donation in $US
+  var amount       = '5.00'
+The language of the Paypal pages (one of DE FR IT ES US)
+  var language     = 'US'
+The button image and its alt text
+  var image_url    = 'https://www.paypal.com/en_US/i/btn/x-click-but21.gif'
+  var image_alt    = 'Make a donation through Paypal'
+
+
+3. Include the 'donation-widget_pp.js' script on some page in your website.
+
+There are two methods for including the script.  Neither one is superior.
+Depending on how your website is managed one method might be easier than the
+other.
+
+Method One:
+  Copy the contents of the script and paste them directly into the html of
+  your page. The Donation Widget Generator will appear where you paste the 
+  script.
+
+Method Two:
+  Place the script file somewhere in your html document root.  Then include
+  the following in your html pages where you want the Donation Widget
+  Generator to appear.  Note: The 'src' must reflect the actual location you
+  put the script file.
+
+  <script type="text/javascript" src="/donation-widget_pp.js"></script>
+
